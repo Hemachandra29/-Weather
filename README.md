@@ -84,7 +84,7 @@ A modern, responsive weather application that provides real-time weather informa
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/weather-app.git
+git clone https://github.com/Hemachandra29/weather.git
 cd weather-app
 ```
 
@@ -190,10 +190,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
 
-Project Link: [https://github.com/yourusername/weather-app](https://github.com/yourusername/weather-app)
+Project Link: [https://github.com/yourusername/weather-app](https://github.com/Hemachandra29/weather)
 
 ---
 
 <div align="center">
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Hemachandra]
 </div> 
