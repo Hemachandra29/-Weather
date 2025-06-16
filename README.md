@@ -188,12 +188,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+E-Mail: [Hemachandra](hemachandranaidu8888@gmail.com)
 
-Project Link: [https://github.com/yourusername/weather-app](https://github.com/Hemachandra29/weather)
+Project Link: [https://github.com/Hemachandra29/weather](https://github.com/Hemachandra29/weather)
 
 ---
 
 <div align="center">
-Made with ❤️ by [Hemachandra]
+Made with ❤️ by Hemachandra
 </div> 
