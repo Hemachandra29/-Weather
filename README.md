@@ -69,7 +69,7 @@ A modern, responsive weather application that provides real-time weather informa
 
 ## 🌐 Live Demo
 
-[View Live Demo](https://hemachandra29.github.io/-Weather/)
+[View Live Demo](https://hemachandra29.github.io/Modern-Weather-Application/)
 
 ## 🚀 Getting Started
 
@@ -84,7 +84,7 @@ A modern, responsive weather application that provides real-time weather informa
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Hemachandra29/weather.git
+git clone https://github.com/Hemachandra29/Modern-Weather-Application.git
 cd weather-app
 ```
 
@@ -190,7 +190,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 E-Mail: [Hemachandra](hemachandranaidu8888@gmail.com)
 
-Project Link: [https://github.com/Hemachandra29/weather](https://github.com/Hemachandra29/weather)
+Project Link: [https://github.com/Hemachandra29/weather](https://github.com/Hemachandra29/Modern-Weather-Application)
 
 ---
 
