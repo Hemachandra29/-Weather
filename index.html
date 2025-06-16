@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌤️ Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Weather Animation Container -->
+    <div id="weather-animation" class="weather-animation"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loader">
+            <i class="fas fa-cloud-sun"></i>
+            <span>Loading weather data...</span>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Search Section -->
+        <div class="search-section glass-effect">
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search for a city...">
+                    <button id="clear-search" class="clear-search"><i class="fas fa-times"></i></button>
+                </div>
+                <button id="search-btn" class="action-btn"><i class="fas fa-search"></i></button>
+                <button id="location-btn" class="action-btn"><i class="fas fa-location-dot"></i></button>
+            </div>
+            <div class="unit-toggle">
+                <button id="celsius" class="active">°C</button>
+                <button id="fahrenheit">°F</button>
+            </div>
+        </div>
+
+        <!-- Suggestions Section -->
+        <div class="suggestions-section glass-effect">
+            <div class="suggestions-header">
+                <h3>Popular Cities</h3>
+                <button id="refresh-suggestions" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div class="popular-cities">
+                <!-- Popular cities will be added here dynamically -->
+            </div>
+            <div class="suggestions-header">
+                <h3>Recent Searches</h3>
+                <button id="clear-recent" class="clear-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            <div class="recent-searches">
+                <!-- Recent searches will be added here dynamically -->
+            </div>
+        </div>
+
+        <!-- Current Weather Section -->
+        <div class="current-weather glass-effect">
+            <div class="location-info">
+                <h2 id="city-name">Loading...</h2>
+                <p id="date-time">--</p>
+            </div>
+            <div class="weather-main">
+                <div class="temperature">
+                    <span id="temperature">--</span>
+                    <span id="unit">°C</span>
+                </div>
+                <div class="weather-icon">
+                    <i id="weather-icon" class="fas fa-cloud"></i>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <i class="fas fa-wind"></i>
+                    <span id="wind-speed">-- km/h</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-droplet"></i>
+                    <span id="humidity">--%</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-sun"></i>
+                    <span id="uv-index">--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hourly Forecast Section -->
+        <div class="hourly-forecast glass-effect">
+            <div class="section-header">
+                <h3>Hourly Forecast</h3>
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Scroll for more</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="hourly-container" id="hourly-container">
+                <!-- Hourly items will be added here dynamically -->
+            </div>
+        </div>
+
+        <!-- Daily Forecast Section -->
+        <div class="daily-forecast glass-effect">
+            <div class="section-header">
+                <h3>7-Day Forecast</h3>
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Scroll for more</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="daily-container" id="daily-container">
+                <!-- Daily items will be added here dynamically -->
+            </div>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle glass-effect">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Weather Detail Modal -->
+        <div id="weather-modal" class="weather-modal">
+            <div class="modal-content glass-effect">
+                <button class="close-modal">&times;</button>
+                <div class="modal-header">
+                    <h2 id="modal-date">--</h2>
+                    <div class="modal-weather-main">
+                        <i id="modal-weather-icon" class="fas fa-cloud"></i>
+                        <span id="modal-temperature">--°</span>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-temperature-high"></i>
+                            <div>
+                                <span>Feels Like</span>
+                                <span id="modal-feels-like">--°</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <div>
+                                <span>Wind Speed</span>
+                                <span id="modal-wind">-- km/h</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-droplet"></i>
+                            <div>
+                                <span>Humidity</span>
+                                <span id="modal-humidity">--%</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-compress"></i>
+                            <div>
+                                <span>Pressure</span>
+                                <span id="modal-pressure">-- hPa</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <span>Visibility</span>
+                                <span id="modal-visibility">-- km</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-cloud"></i>
+                            <div>
+                                <span>Clouds</span>
+                                <span id="modal-clouds">--%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Toast -->
+        <div id="error-toast" class="error-toast">
+            <i class="fas fa-exclamation-circle"></i>
+            <span id="error-message"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
