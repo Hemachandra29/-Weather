@@ -85,7 +85,7 @@ A modern, responsive weather application that provides real-time weather informa
 1. Clone the repository
 ```bash
 git clone https://github.com/Hemachandra29/Modern-Weather-Application.git
-cd weather-app
+cd Modern-Weather-Application
 ```
 
 2. Install dependencies
