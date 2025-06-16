@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Weather App Preview](https://via.placeholder.com/800x400?text=Weather+App+Preview)
+![Weather App Preview](https://hemachandra29.github.io/-Weather/)
 
 [![OpenWeatherMap API](https://img.shields.io/badge/OpenWeatherMap-API-orange)](https://openweathermap.org/api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -69,7 +69,7 @@ A modern, responsive weather application that provides real-time weather informa
 
 ## 🌐 Live Demo
 
-[View Live Demo](https://your-demo-link.com)
+[View Live Demo](https://hemachandra29.github.io/-Weather/)
 
 ## 🚀 Getting Started
 
